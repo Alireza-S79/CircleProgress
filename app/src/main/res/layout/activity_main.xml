@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+
+    >
+
+
+    <com.example.circleprogress.CircleProgress
+        android:id="@+id/circle_progress"
+        android:layout_width="200dp"
+        android:layout_height="200sp"
+        android:layout_centerInParent="true"
+        app:cp_auto_colored="true"
+        app:cp_show_percent="true"
+        app:cp_color="#FF9800"
+        app:cp_max="100"
+        app:cp_min="0"
+        app:cp_stroke_width="8sp" />
+
+    <SeekBar
+        android:id="@+id/seekbar_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="170sp"
+        android:max="100"
+
+        />
+
+    <CheckBox
+        android:id="@+id/cb_auto_colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekbar_progress"
+        android:layout_alignParentLeft="true"
+        android:text="Auto Colored"
+
+        />
+    <CheckBox
+        android:id="@+id/cb_show_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cb_auto_colored"
+        android:layout_alignParentLeft="true"
+        android:textSize="18dp"
+        android:text="Show Percent"
+
+        />
+
+</RelativeLayout>
